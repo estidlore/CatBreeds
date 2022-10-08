@@ -1,0 +1,7 @@
+src/**/*.css.d.ts
+src/**/*.d.ts
+.vscode
+build
+node_modules
+*.js
+*.json
