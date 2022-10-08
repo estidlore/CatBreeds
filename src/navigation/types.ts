@@ -1,0 +1,11 @@
+import type { NativeStackScreenProps } from "@react-navigation/native-stack";
+
+// eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+type IAppParamList = {
+	Splash: Record<string, unknown>;
+}
+
+type TAppScreenProps<T extends keyof IAppParamList> =
+	NativeStackScreenProps<IAppParamList, T> & IAppParamList[T];
+
+export type { IAppParamList, TAppScreenProps };
