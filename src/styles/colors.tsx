@@ -1,4 +1,6 @@
-const colors: Record<string, string> = {
+type TColor = "BLACK" | "WHITE";
+
+const colors: Record<TColor, string> = {
   BLACK: "#040404",
   WHITE: "#FBFBFB",
 };
