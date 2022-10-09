@@ -11,6 +11,7 @@ interface IBreed {
   adaptability: TScale;
   affectionLevel: TScale;
   altNames?: string;
+  bidability?: TScale;
   cfaUrl?: string;
   childFriendly: TScale;
   countryCode: string;
@@ -48,4 +49,4 @@ interface IBreed {
   wikipediaUrl?: string;
 }
 
-export type { IBreed };
+export type { IBreed, IBreedWeight, TScale };
