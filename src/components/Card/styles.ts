@@ -4,10 +4,10 @@ import { colors } from "styles";
 
 const styles = StyleSheet.create({
   box: {
-    backgroundColor: colors.WHITE,
-    height: "100%",
+    borderColor: colors.GRAY,
+    borderRadius: 8,
+    borderWidth: 2,
     padding: 8,
-    width: "100%",
   },
 });
 
