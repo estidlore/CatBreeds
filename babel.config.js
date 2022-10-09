@@ -9,6 +9,7 @@ module.exports = {
           "components/*": ["components/*"],
           "navigation/*": ["navigation/*"],
           "styles/*": ["styles/*"],
+          "types/*": ["types/*"],
           "utils/*": ["utils/*"],
           "views/*": ["views/*"],
         },
