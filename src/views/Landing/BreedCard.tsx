@@ -30,13 +30,11 @@ const BreedCard = ({
         </Text>
       </TouchableOpacity>
       <Image
-        source={
-          image === undefined ? logo : ({
-            height: 32 * image.height / image.width,
-            uri: image.url,
-            width: 32,
-          })
-        }
+        source={image === undefined ? logo : ({
+          height: image.height,
+          uri: image.url,
+          width: image.width,
+        })}
         style={styles.cardImage}
       />
       <Text style={appStyles.p}>
