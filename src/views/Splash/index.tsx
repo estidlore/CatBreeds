@@ -15,9 +15,9 @@ const SplashScreen = ({
 }: TSplashScreenProps): JSX.Element => {
   useEffect((): void => {
     setTimeout((): void => {
-      console.log("Navigate to Landing");
+      navigation.replace("Landing", {});
     }, 3000);
-  }, []);
+  }, [navigation]);
 
   return (
     <Screen style={styles.box}>
