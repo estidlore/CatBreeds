@@ -4,6 +4,7 @@ import type {
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 
+import { DetailsScreen } from "views/Details";
 import { LandingScreen } from "views/Landing";
 import { SplashScreen } from "views/Splash";
 
@@ -18,6 +19,11 @@ const screenOptions: NativeStackNavigationOptions = {
 const AppNavigation = (): JSX.Element => {
   return (
     <Navigator initialRouteName={"Splash"}>
+      <Screen
+        component={DetailsScreen}
+        name={"Details"}
+        options={screenOptions}
+      />
       <Screen
         component={LandingScreen}
         name={"Landing"}
