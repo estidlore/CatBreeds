@@ -6,6 +6,7 @@ import { Header, Screen } from "components";
 import type { TAppScreenProps } from "navigation/types";
 import { styles as appStyles } from "styles";
 
+import { ExtraDetails } from "./Extra";
 import { boolMap, scaleMap } from "./helpers";
 import { styles } from "./styles";
 
@@ -119,6 +120,7 @@ const DetailsScreen = ({
         <Text style={[appStyles.p, styles.text]}>
           {`Peso - métrica: ${breed.weight.metric}`}
         </Text>
+        <ExtraDetails breed={breed} />
       </ScrollView>
     </Screen>
   );
