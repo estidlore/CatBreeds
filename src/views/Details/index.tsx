@@ -43,7 +43,7 @@ const DetailsScreen = ({
           {`Nivel de afección: ${scaleMap(breed.affectionLevel)}`}
         </Text>
         <Text style={[appStyles.p, styles.text]}>
-          {`Amabilidad con niños: ${scaleMap(breed.childFriendly)}`}
+          {`Amigabilidad con niños: ${scaleMap(breed.childFriendly)}`}
         </Text>
         <Text style={[appStyles.p, styles.text]}>
           {`Código de país: ${breed.countryCode}`}
@@ -52,7 +52,7 @@ const DetailsScreen = ({
           {`Códigos de país: ${breed.countryCodes}`}
         </Text>
         <Text style={[appStyles.p, styles.text]}>
-          {`Amabilidad con perros: ${scaleMap(breed.dogFriendly)}`}
+          {`Amigabilidad con perros: ${scaleMap(breed.dogFriendly)}`}
         </Text>
         <Text style={[appStyles.p, styles.text]}>
           {`Nivel de energía: ${scaleMap(breed.energyLevel)}`}
@@ -103,7 +103,7 @@ const DetailsScreen = ({
           {`Necesidad social: ${scaleMap(breed.socialNeeds)}`}
         </Text>
         <Text style={[appStyles.p, styles.text]}>
-          {`Amabilidad con extraños: ${scaleMap(breed.strangerFriendly)}`}
+          {`Amigabilidad con extraños: ${scaleMap(breed.strangerFriendly)}`}
         </Text>
         <Text style={[appStyles.p, styles.text]}>
           {`Cola corta: ${boolMap(breed.suppressedTail)}`}
