@@ -12,46 +12,51 @@ const ExtraDetails = ({
 }: IExtraDetailsProps): JSX.Element => {
   return (
     <View>
-      {breed.altNames === undefined ? undefined : (
+      {breed.altNames ? (
         <Text style={[appStyles.p, styles.text]}>
           {`Nombres alternativos: ${breed.altNames}`}
         </Text>
-      )}
+      ) : undefined}
       {breed.bidability === undefined ? undefined : (
         <Text style={[appStyles.p, styles.text]}>
           {`Obediencia: ${scaleMap(breed.bidability)}`}
         </Text>
       )}
-      {breed.cfaUrl === undefined ? undefined : (
+      {breed.catFriendly === undefined ? undefined : (
+        <Text style={[appStyles.p, styles.text]}>
+          {`Amigabilidad: ${scaleMap(breed.catFriendly)}`}
+        </Text>
+      )}
+      {breed.cfaUrl ? (
         <Text style={[appStyles.p, styles.text]}>
           {`Url del CFA: ${breed.cfaUrl}`}
         </Text>
-      )}
+      ) : undefined}
       {breed.lap === undefined ? undefined : (
         <Text style={[appStyles.p, styles.text]}>
           {`Ama los regazos: ${boolMap(breed.lap)}`}
         </Text>
       )}
-      {breed.referenceImageId === undefined ? undefined : (
+      {breed.referenceImageId ? (
         <Text style={[appStyles.p, styles.text]}>
           {`ID de imagen de referencia: ${breed.referenceImageId}`}
         </Text>
-      )}
-      {breed.vcaHospitalsUrl === undefined ? undefined : (
+      ) : undefined}
+      {breed.vcaHospitalsUrl ? (
         <Text style={[appStyles.p, styles.text]}>
           {`URL de hospitales VCA: ${breed.vcaHospitalsUrl}`}
         </Text>
-      )}
-      {breed.vetStreetUrl === undefined ? undefined : (
+      ) : undefined}
+      {breed.vetStreetUrl ? (
         <Text style={[appStyles.p, styles.text]}>
           {`URL de VetStreet: ${breed.vetStreetUrl}`}
         </Text>
-      )}
-      {breed.wikipediaUrl === undefined ? undefined : (
+      ) : undefined}
+      {breed.wikipediaUrl ? (
         <Text style={[appStyles.p, styles.text]}>
           {`URL de Wikipedia: ${breed.wikipediaUrl}`}
         </Text>
-      )}
+      ) : undefined}
     </View>
   );
 };

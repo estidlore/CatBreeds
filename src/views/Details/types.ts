@@ -1,20 +1,11 @@
-import type { IBreed } from "types/breed";
+import type { IBreed, IBreedExtraData } from "types/breed";
 
 interface IDetailsProps {
   breed: IBreed;
 }
 
 interface IExtraDetailsProps {
-  breed: Pick<
-    IBreed, "altNames" |
-    "bidability" |
-    "cfaUrl" |
-    "lap" |
-    "referenceImageId" |
-    "vcaHospitalsUrl" |
-    "vetStreetUrl" |
-    "wikipediaUrl"
-  >;
+  breed: IBreedExtraData;
 }
 
 export type { IDetailsProps, IExtraDetailsProps };

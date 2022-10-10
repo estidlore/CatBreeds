@@ -1,7 +1,6 @@
-import type { IBreed } from "types/breed";
+import type { IBreedBasicData } from "types/breed";
 
-interface IBreedCardProps
-  extends Pick<IBreed, "image" | "intelligence" | "name" | "origin"> {
+interface IBreedCardProps extends Omit<IBreedBasicData, "description" | "id"> {
   onPress: () => void;
 }
 

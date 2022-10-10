@@ -7,16 +7,33 @@ interface IBreedWeight {
   metric: string;
 }
 
-interface IBreed {
-  adaptability: TScale;
-  affectionLevel: TScale;
+interface IBreedBasicData {
+  description: string;
+  id: string;
+  image?: IImageData;
+  intelligence: TScale;
+  name: string;
+  origin: string;
+}
+
+interface IBreedExtraData {
   altNames?: string;
   bidability?: TScale;
+  catFriendly?: TScale;
   cfaUrl?: string;
+  lap?: boolean;
+  vcaHospitalsUrl?: string;
+  referenceImageId?: string;
+  vetStreetUrl?: string;
+  wikipediaUrl?: string;
+}
+
+interface IBreed extends IBreedBasicData, IBreedExtraData {
+  adaptability: TScale;
+  affectionLevel: TScale;
   childFriendly: TScale;
   countryCode: string;
   countryCodes: string;
-  description: string;
   dogFriendly: TScale;
   energyLevel: TScale;
   experimental: boolean;
@@ -24,17 +41,10 @@ interface IBreed {
   hairless: boolean;
   healthIssues: TScale;
   hypoallergenic: boolean;
-  id: string;
-  image?: IImageData;
   indoor: boolean;
-  intelligence: TScale;
-  lap?: boolean;
   lifeSpan: string;
-  name: string;
   natural: boolean;
-  origin: string;
   rare: boolean;
-  referenceImageId?: string;
   rex: boolean;
   sheddingLevel: TScale;
   socialNeeds: TScale;
@@ -42,11 +52,8 @@ interface IBreed {
   strangerFriendly: TScale;
   suppressedTail: boolean;
   temperament: string;
-  vcaHospitalsUrl?: string;
-  vetStreetUrl?: string;
   vocalisation: TScale;
   weight: IBreedWeight;
-  wikipediaUrl?: string;
 }
 
-export type { IBreed, IBreedWeight, TScale };
+export type { IBreed, IBreedBasicData, IBreedExtraData, IBreedWeight, TScale };
