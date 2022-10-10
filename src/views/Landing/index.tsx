@@ -48,7 +48,7 @@ const LandingScreen = ({
             key={breed.name}
             name={breed.name}
             onPress={function fn(): void {
-              console.log("Navigate to Details", breed);
+              navigation.navigate("Details", { breed });
             }}
             origin={breed.origin}
           />
