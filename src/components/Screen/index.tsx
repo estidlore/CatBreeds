@@ -15,10 +15,7 @@ const Screen = ({
 }: IScreenProps): JSX.Element => {
   return (
     <SafeAreaView style={[styles.box, style]}>
-      <StatusBar
-        backgroundColor={styles.box.backgroundColor}
-        barStyle={"light-content"}
-      />
+      <StatusBar hidden={true} />
       {children}
     </SafeAreaView>
   );
