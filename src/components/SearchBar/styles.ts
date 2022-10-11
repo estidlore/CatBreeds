@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-import { colors } from "styles";
+import { colors, fonts } from "styles";
 
 const styles = StyleSheet.create({
   box: {
@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
   input: {
     color: colors.GRAY_DARK,
     flexGrow: 1,
+    fontFamily: fonts.SOURCE_SANS_PRO,
     fontSize: 18,
   },
 });

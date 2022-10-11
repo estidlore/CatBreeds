@@ -20,7 +20,9 @@ const LandingScreen = ({
   const [filteredBreeds, setFilteredBreeds] = useState<IBreed[]>([]);
 
   const handleSearch = useCallback((val: string): void => {
-    setFilteredBreeds(breeds.filter((breed) => breed.name.includes(val)));
+    setFilteredBreeds(breeds.filter((breed) => {
+      return breed.name.toLowerCase().includes(val.toLowerCase());
+    }));
   }, [breeds, setFilteredBreeds]);
 
   useEffect((): void => {
@@ -36,7 +38,11 @@ const LandingScreen = ({
   return (
     <Screen>
       <Header navigation={navigation} title={"Cat Breeds"} />
-      <SearchBar onSearch={handleSearch} style={styles.searchBar} />
+      <SearchBar
+        onSearch={handleSearch}
+        placeholder={"Buscar raza"}
+        style={styles.searchBar}
+      />
       <Text style={[appStyles.p, styles.resultsCount]}>
         {`${filteredBreeds.length} resultados`}
       </Text>
