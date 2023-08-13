@@ -1,8 +1,14 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { SafeAreaView } from 'react-native';
+
+import { Cats } from 'views/Cats';
 
 const App = (): JSX.Element => {
-  return <Text>{'Cat Breeds'}</Text>;
+  return (
+    <SafeAreaView>
+      <Cats />
+    </SafeAreaView>
+  );
 };
 
 export default App;
